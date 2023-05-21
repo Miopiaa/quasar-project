@@ -1,38 +1,33 @@
-import { defineComponent, ref } from 'vue';
+import { defineComponent } from 'vue';
 
 interface Form {
-  email: {
-    value: string;
-    error: boolean;
-    msg: string;
-  };
-  password: {
-    value: string;
-    error: boolean;
-    msg: string;
-  };
+  email: string;
+  emailError: boolean;
+  emailErrorMessage: string;
+  password: string;
+  passwordError: boolean;
+  passwordErrorMessage: string;
 }
 
 export default defineComponent({
   name: 'IndexPage',
-  setup() {
-    const form = ref<Form>({
-      email: {
-        value: '',
-        error: false,
-        msg: '',
-      },
-      password: {
-        value: '',
-        error: false,
-        msg: '',
-      },
-    });
-
-    const submitLogin = () => {
-      console.log('login');
+  data() {
+    const form: Form = {
+      email: '',
+      emailError: false,
+      emailErrorMessage: '',
+      password: '',
+      passwordError: false,
+      passwordErrorMessage: '',
     };
 
-    return { form, submitLogin };
+    return {
+      form,
+    };
+  },
+  methods: {
+    submitLogin() {
+      console.log('login');
+    },
   },
 });
