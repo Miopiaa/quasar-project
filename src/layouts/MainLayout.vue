@@ -82,11 +82,6 @@ const linksList = [
     icon: 'favorite',
     link: 'https://awesome.quasar.dev',
   },
-  {
-    title: 'Email',
-    caption: 'Mandar email test',
-    icon: 'favorite',
-  },
 ];
 
 export default defineComponent({
