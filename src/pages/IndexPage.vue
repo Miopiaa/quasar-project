@@ -37,9 +37,12 @@
           </q-input>
         </div>
         <div class="column">
-          <q-btn flat style="color: #ff0080" label="Entrar" @click="submitLogin"
-            >Login</q-btn
-          >
+          <q-btn
+            flat
+            style="color: #ff0080"
+            label="Entrar"
+            @click="submitLogin"
+          />
         </div>
       </div>
     </div>
